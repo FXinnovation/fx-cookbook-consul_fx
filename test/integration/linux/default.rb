@@ -18,7 +18,7 @@ control "consul_fx - #{os.name} #{os.release}" do
       its('type')  { should eq :file }
     end
   end
-    
+
   %w(/opt/consul /opt/consul/conf.d /opt/consul/bin /var/lib/consul).each do |consul_dir|
     describe directory(consul_dir) do
       it           { should exist }

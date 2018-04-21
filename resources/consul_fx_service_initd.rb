@@ -25,7 +25,6 @@ default_action :create
 action :create do
   # Defining template variables
   daemon         = "#{new_resource.install_dir}/bin/consul"
-  user           = new_resource.user
   pid_file       = '/var/run/consul.pid'
   environment    = {
     'GOMAXPROCS' => [node['cpu']['total'], 2].max.to_s,
