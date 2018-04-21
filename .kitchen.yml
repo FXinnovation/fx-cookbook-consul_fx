@@ -143,7 +143,6 @@ suites:
     - debian8
     - debian9
     - ubuntu1604
-    - ubuntu1404
     verifier:
       inspec_tests:
       - name: linux

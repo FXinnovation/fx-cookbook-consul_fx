@@ -10,6 +10,6 @@ chef_version      '>=12.14' if respond_to?(:chef_version)
 depends           'nssm'
 depends           'unzip_fx'
 supports          'debian', '>= 8'
-supports          'ubuntu', '>= 14.04'
+supports          'ubuntu', '>= 16.04'
 supports          'redhat', '>= 6.0'
 supports          'centos', '>= 6.0'
