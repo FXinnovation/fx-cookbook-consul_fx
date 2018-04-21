@@ -111,17 +111,17 @@ platforms:
           get-service winrm
 
 suites:
-  - name: windows
-    run_list:
-      - recipe[consul_fx::kitchen]
-    includes:
-    - windows2016
-    - windows2012
-    - windows2008
-    verifier:
-      inspec_tests:
-      - name: windows
-        path: test/integration/windows
+#  - name: windows
+#    run_list:
+#      - recipe[consul_fx::kitchen]
+#    includes:
+#    - windows2016
+#    - windows2012
+#    - windows2008
+#    verifier:
+#      inspec_tests:
+#      - name: windows
+#        path: test/integration/windows
   - name: linux
     run_list:
       - recipe[consul_fx::kitchen]
