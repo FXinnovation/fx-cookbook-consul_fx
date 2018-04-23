@@ -6,9 +6,16 @@ This cookbook provides a resource that allows you to install consul.
 `>= 12.14`
 
 ### Cookbooks
-* `unzip`
+* `unzip_fx`
 
 ### Platforms
+* ubuntu1604
+* centos6
+* centos7
+* redhat6
+* redhat7
+* debian8
+* debian9
 
 ## Resources
 ### consul_fx

@@ -5,7 +5,19 @@
 # found at https://inspec.io/docker/reference/resources/
 #
 control "consul_fx - #{os.name} #{os.release}" do
-  title 'Ensure consul is installed'
+  title 'Ensure consul is installed correctly'
+
+  describe user('consul') do
+    it           { should exist }
+    its('uid')   { should < 1000 }
+    its('group') { should eq 'consul' }
+    its('home')  { should eq '/opt/consul' }
+  end
+
+  describe group('consul') do
+    it { should exist }
+  end
+
   describe command('/opt/consul/bin/consul --version') do
     its('exit_status') { should eq 0 }
   end
