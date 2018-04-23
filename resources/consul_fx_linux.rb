@@ -52,6 +52,8 @@ action :install do
     group   new_resource.group
     shell   '/bin/bash'
     comment 'User for consul agent'
+    home    new_resource.install_directory
+    system  true
     action  :create
   end
 
