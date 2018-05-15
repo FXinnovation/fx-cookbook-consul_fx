@@ -7,7 +7,6 @@ version           '0.1.0'
 source_url        'https://bitbucket.org/fxadmin/public-common-cookbook-consul_fx'
 issues_url        'https://bitbucket.org/fxadmin/public-common-cookbook-consul_fx/issues'
 chef_version      '>=12.14' if respond_to?(:chef_version)
-depends           'nssm'
 depends           'unzip_fx'
 supports          'debian', '>= 8'
 supports          'ubuntu', '>= 16.04'

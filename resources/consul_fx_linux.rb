@@ -18,6 +18,7 @@ property :checksum,          String
 property :version,           String, default:  '0.7.5'
 property :user,              String, default:  'consul'
 property :group,             String, default:  'consul'
+property :shell,             String, default:  '/sbin/nologin'
 property :service_name,      String, default:  'consul'
 property :install_directory, String, default:  '/opt/consul'
 property :data_directory,    String, default:  '/var/lib/consul'
@@ -50,7 +51,7 @@ action :install do
   # Declaring user
   declare_resource(:user, new_resource.user) do
     group   new_resource.group
-    shell   '/bin/bash'
+    shell   new_resource.shell
     comment 'User for consul agent'
     home    new_resource.install_directory
     system  true

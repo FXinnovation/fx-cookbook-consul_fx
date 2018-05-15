@@ -12,6 +12,7 @@ control "consul_fx - #{os.name} #{os.release}" do
     its('uid')   { should < 1000 }
     its('group') { should eq 'consul' }
     its('home')  { should eq '/opt/consul' }
+    its('shell') { should eq '/sbin/nologin' }
   end
 
   describe group('consul') do

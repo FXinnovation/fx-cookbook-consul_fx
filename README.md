@@ -30,6 +30,7 @@ The consul_fx resource allows you to install and configure consul.
 | `version` | `String` | `false` | `0.7.5` | `All` | Version of consul |
 | `user` | `String` | `false` | `consul` | `All` | User that will run consul |
 | `group` | `String` | `false` | `consul` | `All` | Group in which consul will be |
+| `shell` | `String` | `false` | `/sbin/nologin` | `Linux` | Shell for the consul user |
 | `service_name` | `String` | `false` | `consul` | `All` | Name of the consul service |
 | `install_directory` | `String` | `false` | `/opt/consul` | `All` | Directory where consul will be installed |
 | `data_directory` | `String` | `false` | `/var/lib/consul` | `All` | Directory where consul will save its data |
