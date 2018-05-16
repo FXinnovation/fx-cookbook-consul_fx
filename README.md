@@ -40,7 +40,7 @@ The consul_fx resource allows you to install and configure consul.
 ## Versionning
 This cookbook will follow semantic versionning 2.0.0 as described [here](https://semver.org/)
 
-## Lisence
+## Licence
 MIT
 
 ## Contributing
