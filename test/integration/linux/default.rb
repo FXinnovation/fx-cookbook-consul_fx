@@ -1,5 +1,5 @@
 #
-# Inspec test for adjoin_fx on debian platform family
+# Inspec test for consul_fx on linux os
 #
 # the Inspec refetence, with examples and extensive documentation, can be
 # found at https://inspec.io/docker/reference/resources/
@@ -37,6 +37,7 @@ control "consul_fx - #{os.name} #{os.release}" do
       it           { should exist }
       its('group') { should eq 'consul' }
       its('owner') { should eq 'consul' }
+      its('mode')  { should cmp '0750' }
     end
   end
 

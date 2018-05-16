@@ -33,7 +33,7 @@ action :create do
     content(
       Unit: {
         Description: 'Consul systemd service unit',
-        After:       'network.online.target'
+        After:       'network.online.target',
       },
       Service: {
         ExecStart:  exec_start,
